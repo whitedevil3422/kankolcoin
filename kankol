@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kankol Coin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #ffcccb;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .hamster {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .hamster:active {
+            transform: scale(0.9);
+        }
+
+        .wallet {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Kankol Coin</h1>
+    </div>
+
+    <div class="container">
+        <img 
+            src="/mnt/data/photo_2024-11-29_14-18-39.jpg" 
+            alt="Kankol Character" 
+            class="hamster" 
+            id="hamsterImage"
+        />
+        <div class="wallet">
+            Wallet Balance: <span id="coinBalance">0</span> Coins
+        </div>
+    </div>
+
+    <script>
+        let coinBalance = 0;
+
+        // Function to handle image tapping
+        const hamsterImage = document.getElementById("hamsterImage");
+        const coinBalanceDisplay = document.getElementById("coinBalance");
+
+        hamsterImage.addEventListener("click", () => {
+            coinBalance += 1;
+            coinBalanceDisplay.textContent = coinBalance;
+        });
+    </script>
+</body>
+</html>
